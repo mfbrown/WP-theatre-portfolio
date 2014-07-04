@@ -1,0 +1,791 @@
+/*
+Theme Name: Lighting Portfolio
+Theme URI: http://
+Author: Michael Brown	
+Author URI: http://mfbrowndesign.com
+Description: DESCRIPTION
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: clean, light, responsive, two-column, custom-post-types, custom-fields, portfolio
+Text Domain: wpportfolio
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+html { 
+  background: url("img/Cat-Homepage-Background2.jpg") no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+/*Typography------------------------------------------------ */
+
+body {
+	font-family: 'Lato', sans-serif;
+}
+
+p {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	font-size: 1em;
+	color: #e4e4e4;
+	line-height: 1.2em;
+}
+
+a {
+	font-family: 'Roboto Slab', sans-serif;
+	font-weight: 400;
+	text-decoration: none;
+	color: inherit;
+}
+
+.about-me a:hover { 
+	color: lightgrey;
+}
+
+h1 {
+	font-family: 'Roboto Slab', 'Arial Black', serif;
+	color: #00b2e1;
+	font-size: 4em;
+	margin: 0.6em 0;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.2);
+}
+
+h2 {
+	font-family: 'Roboto Slab', 'Arial Black', serif;
+	font-size: 3em;
+	color: #e4e4e4;
+	margin: 0.5em 0;
+}
+
+.about-me h3 {
+	font-size: 2em;
+}
+
+h3 {
+	font-family: 'Roboto Slab', 'Arial Black', serif;
+	font-size: 2.5em;
+	font-weight: 400;
+	color: #CACACA;
+	margin: 0.5em 0;
+}
+
+h4 {
+	font-size: 2em;
+	font-weight: 400;
+	margin: 0.5em 0;
+	color: #CACACA;
+}
+
+h5,
+h6 {
+	font-size: 1.25em;
+	font-weight: 400;
+	color: #ffffff;
+	margin: 0.5em 0;
+}
+
+footer p {
+	font-size: 0.75em;
+	line-height: 1.2;
+	color: black;
+}
+
+footer ul {
+	font-size: 0.75em;
+}
+
+hr {
+	display: block;
+	clear: both;
+	margin-bottom: 1.5em;
+}
+
+input[type="submit"] {
+	font-family: 'Roboto Slab';
+	border: none;
+	text-align: center;
+	margin-right: 0.75em;
+	color: #e4e4e4;
+	font-size: 1.2em;
+	padding: 0.4em 0.5em;
+	cursor: pointer;
+	background-color: rgba(0,141,178,0.5);
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	-ms-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+
+}
+
+	/* RESUME SPECIFIC FONT RULES --------- */
+
+	.resume-background h3,
+	.resume-background p {
+		color: #444444;
+	}
+
+	.resume-background p {
+		font-size: 0.8em;
+	}
+
+	.resume-page h4 {
+		margin-bottom: 0.25em;
+	}
+
+	.resume-page {
+		color: black;
+	}
+
+	.resume-background hr {
+		margin-bottom: 0;
+	}
+
+	.resume-page p {
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+	}
+
+	.show-title {
+		font-style: italic;
+	}
+
+	.resume-header h4 {
+		font-size: 0.8em;
+		font-weight: 400;
+		margin-bottom: 0;
+		color: #444444;
+	}
+
+	.theatre-space {
+		font-size: 0.7em;
+		font-weight: 700;
+		margin: 0;
+		padding: 0;
+	}
+
+	#image-header h1 {
+		margin: 0;
+		padding-top: 50px;
+	}
+
+	/* PORTFOLIO SPECIFIC FONT RULES ----------- */
+
+	.portfolio-title h1 {
+		font-size: 2em;
+		font-style: italic;
+	}
+
+	.portfolio-title h3 {
+		font-size: 1em;
+	}
+
+	.portfolio-title p {
+		font-size: 0.75em;
+	}
+
+	.show-thumbnail p {
+		font-style: italic;
+	}
+
+	.show-details {
+		font-size: 0.625em;
+	}
+
+	.portfolio-bottom p {
+		margin: 0.5em;
+		font-size: 0.75em;
+	}
+
+	/* CONTACT FONT RULES ----------------------- */
+
+	.contact-info a:hover {
+		color: lightgrey;
+	}
+
+	/* NAV FONT RULES --------------------------- */
+	.top-bar h1 {
+		text-shadow: none;
+	}
+
+	.top-bar-section ul {
+		padding-left: 20px;
+	}
+
+	.top-bar-section ul li a {
+		font-family: 'Roboto Slab';
+		font-size: 1em;
+		padding: 0 0 0 1em;
+	}
+
+	.menu-item-object-portfolio a {
+		font-style: italic;
+	}
+
+	li.title.back.js-generated h5 {
+		margin-top: 0;
+	}
+
+
+/* GLOBAL STYLES---------------------------------------------- */
+
+body {
+	height: inherit;
+	position: relative;
+}
+
+.container {
+	width: 100%;
+	position: relative;
+	min-height: 100%;
+}
+
+.subpage-indent {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#picture-header {
+	position: relative;
+}
+
+#image-header {
+	width: 100%;
+	height: 200px;
+}
+
+#picture-header h1 {
+	position: absolute;
+}
+
+
+
+/* NAVBAR STYLES -----------------*/
+
+.title-area {
+	padding-left: 0;
+}
+
+.top-bar .toggle-topbar a:before {
+	content: '\f0c9';
+	font-family: FontAwesome;
+}
+
+.top-bar-section .dropdown li a {
+	padding: 0 0 0 16px;
+}
+
+li.title.back.js-generated h5:before {
+	content:'\f060';
+	font-family: FontAwesome;
+}
+
+.top-bar-section .dropdown li {
+	border-bottom: 1px solid #1a1a1a;
+}
+
+.top-bar-section .dropdown li:last-child {
+	border-bottom: none;
+}
+
+/* FOOTER STYLES ------------------------------------*/
+
+footer {
+	background-color: #fcfcfc;
+	position: absolute;
+	top: 105%;
+	width: 100%;
+}
+
+footer div {
+	text-align: center;
+}
+
+.footer-menu {
+	list-style-type: none;
+	padding: 0;
+
+}
+
+.footer-menu li {
+	padding: 0 10px;
+	border-right: 1px solid black;
+	display: inline;
+
+}
+
+.footer-menu li:last-child {
+	border-right: none;
+}
+
+.footer-center	{
+	
+	text-align: center;
+
+}
+
+/* Homepage styles ----------------------------------*/
+
+#frontpage-info {
+	padding-top: 70px;
+}
+
+.page-title,
+.page-subtitle {
+	text-align: center;
+}
+
+.page-title h1 {
+	margin: 0;
+}
+
+.page-subtitle h4 {
+	color: #ff8919;
+	margin: 0;
+	font-size: 3em;
+	font-weight: 400;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+}
+
+.homepage-nav {
+	padding-top: 2em;
+	padding-bottom: 2em;
+	text-align: center;
+}
+
+.homepage-nav a {
+	display: inline;
+	padding: 0;
+	text-align: center;
+	margin-right: 0.75em;
+	color: #e4e4e4;
+	font-size: 1.2em;
+	padding: 0.4em 0.5em;
+	background-color: rgba(0,141,178,0.5);
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	-ms-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+}
+
+.homepage-nav a:last-child {
+	margin-right: 0;
+}
+
+.about-me {
+	margin: auto;
+	background-color: rgba(0,0,0,0.5);
+	width: 90%;
+	text-align: center;
+}
+
+.about-me h2 {
+	font-family: 'Roboto Slab', 'Arial Black', serif;
+	padding: 1em 0 1em 0.666667em;
+	color: white;
+	background-color: rgba(0,0,0,0.7);
+	margin-bottom: 0;
+}
+
+.about-me p {
+	margin-top: 0;
+	color: #e4e4e4;
+	line-height: 1.5em;
+}
+
+/* PORTFOLIO STYLES -------------------------------*/
+
+.portfolio-grid {
+	padding-bottom: 1.875em;
+}
+
+
+.show-thumbnail {
+	position: relative;
+}
+
+.show-thumbnail img {
+	width: 100%;	
+	max-height: 320px;
+	border: 3px solid #dddddd;
+}
+
+.show-thumbnail div {
+	position: absolute;
+	bottom: 3px;
+	left: 3px;
+	margin: auto;
+	width: 98.8%;
+	border: 3px rgba(0,0,0,0.5);
+}
+
+.show-thumbnail div p {
+	background-color: rgba(0,0,0,0.5);
+	margin: 0;
+	padding-left: 5px;
+	padding-bottom: 5px;
+}
+
+.show-caption {
+	position: absolute;
+	z-index: 100;
+	bottom: 0;
+	width: 100%;
+	background-color: rgba(0,0,0,0.4);
+	color: #e4e4e4;
+}
+
+.show-details {
+	padding-left: 0;
+}
+
+#left {
+	padding-left: 0;
+}
+
+.portfolio-bottom {
+	text-align: right;
+}
+
+.portfolio-bottom hr {
+	margin-bottom: 0.75em;
+}
+
+	/* GALLERY STYLES -------*/
+
+    #gallery-1 {
+    margin: auto;
+    }
+
+    #gallery-1 .gallery-item {
+    float: left;
+    margin-top: 10px;
+    text-align: center;
+    }
+
+    #gallery-1 img {
+    border: 2px solid #cfcfcf;
+    }
+
+    #gallery-1 .gallery-caption {
+    margin-left: 0;
+    }
+                    
+
+/* RESUME STYLES ----------------------------------*/
+
+.resume-background {
+	background: url("img/crossword.png");
+	box-shadow: 5px 5px 0px 0px #c4c4c4;
+	-webkit-box-shadow: 5px 5px 0px 0px #c4c4c4;
+	-moz-box-shadow: 5px 5px 0px 0px #c4c4c4;
+}
+
+.show-date {
+	text-align: right;
+}
+
+.resume-header {
+	font-weight: 400;
+}
+
+.fa-picture-o {
+	margin-left: 10px;
+}
+
+.resume-download {
+	text-align: center;
+}
+
+/* CONTACT FORM STYLES ----------------------------*/
+
+
+.fscf-input-text {
+	background-color: #e4e4e4;
+	border: none;
+}
+
+#fscf_required1	{
+	margin-bottom: 15px;
+}
+
+.fscf-input-textarea {
+	height: 200px;
+	background-color: #e4e4e4;
+}
+
+input.fscf-input-captcha {
+	width: 50%;
+}
+
+#fscf_captcha_field1 {
+	margin-top: 15px;
+}
+	
+#fscf_captcha_refresh1 {
+	display: inline-block;
+}
+
+#FSContact1 {
+	margin: 0;
+	color: #e4e4e4;
+}
+
+
+#fscf_captcha_refresh1 i {
+	margin-left: 10px;
+
+}
+
+label {
+	color: #e4e4e4;
+}
+
+.captcha-refresh {
+	margin-left: 10px;
+	font-size: 1.25em;
+}
+
+
+
+/* MEDIA QUERIES ----------------------------------*/
+
+/* MEDIUM SCREEN AND UP----------------------------------*/
+@media only screen and (min-width: 40.063em){
+	
+	/*Typography Changes */
+
+	p {
+		font-size: 1.2em;
+	}
+
+	h1 {
+		text-shadow: 2px 2px 1px rgba(255,255,255,0.3); 
+	}
+
+	h3 {
+		font-weight: 700;
+	}
+
+	h4 {
+		font-weight: 700;
+	}
+
+	footer ul {
+	font-size: 1em;
+}
+
+	.theatre-space {
+		font-size: 0.8em;
+	}
+
+	.resume-header h4 {
+		font-size: 1.25em;
+		font-weight: 700;
+		color: #444444;
+	}
+
+	.resume-background p {
+		font-size: 1.2em;
+	}
+
+	.show-details {
+		font-size: 1em;
+	}
+
+	.portfolio-title h1 {
+		font-size: 3em;
+	}
+
+	.portfolio-title h3 {
+		font-size: 2em;
+	}
+
+	.portfolio-title p {
+		font-size: 1.2em;
+	}
+
+	#fscf_captcha_refresh1 i {
+		font-size: 1.2em;
+	}
+	
+
+	/*Layout Changes */
+
+	.top-bar-section .dropdown li a {
+		padding: 12px;
+	}
+
+	#frontpage-info	{
+		margin-left: 5%;
+	}
+
+	.homepage-nav {
+		text-align: left;
+		margin-left: 5%;
+	}
+	
+	.homepage-button a {
+		padding: 0.4em 0.75em;
+	}
+	
+	.about-me {
+	margin-left: 5%;
+	width: 40%;
+	text-align: left;
+	}
+	
+	.right-footer {
+	text-align: right;
+	}
+
+	.page-title h1 {
+	text-align: left;
+	}
+
+	.page-subtitle h4 {
+	text-align: left;
+	}
+
+	.show-details {
+	padding-left: 0.9375em;
+	padding-right: 0.9375em;
+	}
+
+	.subpage-indent {
+	padding-left: 15px;
+	padding-right: 15px;
+	}
+
+	#FSContact1 {
+		max-width: 33.75em;
+	}
+
+	.footer-menu li {
+		padding: 0 20px;
+	}
+
+	.left-footer {
+		text-align: left;
+	}
+
+	.resume-download {
+		text-align: left;
+	}
+
+	.rwd-break {
+		display: none;
+		margin-top: 20px;
+	}
+
+	#image-header {
+		height: 300px;
+	}
+}
+
+/* LARGE SCREEN ------------------------------------*/
+
+@media only screen and (min-width: 64.063em) { 
+
+	/*TYPOGRAPHY CHANGES --------------------- */
+
+	.show-details {
+		font-size: 1.1em;
+	}
+
+	.homepage-nav a:hover {
+	background-color: #008db2;
+	-webkit-transition-property: background-color;
+	-moz-transition-property: background-color;
+	-o-transition-property: background-color;
+	-ms-transition-property: background-color;
+	transition-property: background-color;
+	}
+
+
+  .main-menu li:first-child:hover ul {
+    display: block;
+    position: absolute;
+    margin-top: 5px;
+    right: 0; 
+  }
+  
+  .menu-icon {
+    display: none;
+  }
+  
+  .main-menu {
+    display: inline-block;
+    width: auto;
+    float: right;
+    padding: 0;
+    margin-right: 5px;
+  }
+  
+  .main-menu li {
+    width: 100px;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 20px;
+  }
+
+  .main-menu li:hover {
+  	background-color: #008db2;
+	-webkit-transition-property: background-color;
+	-moz-transition-property: background-color;
+	-o-transition-property: background-color;
+	-ms-transition-property: background-color;
+	transition-property: background-color;
+  }
+
+  .main-menu li a {
+  	height: 90%;
+  }
+  
+  .main-menu li:last-child {
+    margin-right: 0;
+  }
+  
+  .main-menu li ul {
+    position: absolute;
+    margin-top: 5px;
+    right: 9999px; 
+  }
+  
+  input[type="submit"]:hover {
+  	background-color: #008db2;
+	-webkit-transition-property: background-color;
+	-moz-transition-property: background-color;
+	-o-transition-property: background-color;
+	-ms-transition-property: background-color;
+	transition-property: background-color;
+  }
+
+  .footer-menu li a:hover {
+  	text-decoration: underline;
+  	-webkit-transition-property: text-decoration;
+	-moz-transition-property: text-decoration;
+	-o-transition-property: text-decoration;
+	-ms-transition-property: text-decoration;
+	transition-property: text-decoration;
+  }
+
+  	#image-header {
+		height: 400px;
+	}
+
+ }
+
+
