@@ -480,7 +480,11 @@ footer div {
     #gallery-1 .gallery-caption {
     margin-left: 0;
     }
-                    
+
+    .gallery-col-3 .gallery-item {
+    	width: 100% !important;
+    }
+    
 
 /* RESUME STYLES ----------------------------------*/
 
@@ -691,6 +695,11 @@ label {
 	#image-header {
 		height: 300px;
 	}
+
+	/*Resize gallery items to 50%*/
+	.gallery-col-3 .gallery-item {
+    	width: 50% !important;
+    }
 }
 
 /* LARGE SCREEN ------------------------------------*/
@@ -785,6 +794,10 @@ label {
   	#image-header {
 		height: 400px;
 	}
+
+	.gallery-item {
+    	width: 33.33% !important;
+    }
 
  }
 
