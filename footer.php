@@ -25,8 +25,7 @@
 	      		&copy; <?php echo date('Y') ?>.</p>
 	      	</div>
 	        <div class="small-12 medium-4 columns right-footer">
-	          	<p>Site designed and built by: <a href="http://www.mfbrowndesign.com">Michael Brown</a><br>
-	            Powered by Wordpress</p>
+	          	<p>Site designed and built by: <a href="http://www.mfbrowndesign.com">Michael Brown</a></p>
 	        </div>
 	        <div class="small-12 columns footer-center show-for-small-only">
 	      		<p>Catherine Girardi Lighting Design<br>

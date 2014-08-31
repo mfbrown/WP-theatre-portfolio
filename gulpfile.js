@@ -1,16 +1,25 @@
-var gulp = require('gulp');
-var sass = require('gulp-ruby-sass');
+var gulp = require('gulp'),
+sass = require('gulp-ruby-sass'),
+watch = require('gulp-watch'),
+livereload = require('gulp-livereload'),
+lr = require('tiny-lr'),
+server = lr();
+
 
 gulp.task('sass', function () {
-    return gulp.src('src/scss/app.scss')
-        .pipe(sass({sourcemap: true, sourcemapPath: '../scss'}))
+    return gulp.src('scss/style.scss')
+        .pipe(sass({sourcemap: true, sourcemapPath: './'}))
         .on('error', function (err) { console.log(err.message); })
-        .pipe(gulp.dest('dist/css'));
+        .pipe(gulp.dest('./'))
 });
 
-// Watch Files For Changes
-gulp.task('watch', function() {
-    gulp.watch('scss/*.scss', ['sass']);
+    watch({glob: 'scss/**/*.scss'}, function(files) {
+        return files.pipe(sass({sourcemap: true, sourcemapPath: './'}))
+            .pipe(gulp.dest('./'));
+            
+    });
 });
 
-gulp.task('defaut', ['sass'])
+var watcher = gulp.watch('scss/**/*.scss', ['sass', 'watch']);
+
+gulp.task('default', ['sass', 'watch']);
