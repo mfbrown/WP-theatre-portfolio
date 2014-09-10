@@ -35,6 +35,8 @@ function theme_js() {
     
 }
 
+add_theme_support('post-thumbnails');
+
 function get_picturefill() {
     wp_enqueue_script('picturefill', plugins_url( '/js/picturefill.js', __FILE__));
 }
@@ -42,6 +44,10 @@ add_action('wp_enqueue_scripts', 'get_picturefill');
 add_image_size('large-img', 1000, 702);
 add_image_size('medium-img', 700, 372);
 add_image_size('small-img', 300, 200);
+
+// Custom image size for portfolio
+
+add_image_size( 'portfolio-image', 470, 320, true );
 
 
 add_action('wp_enqueue_scripts', 'theme_js');
@@ -53,7 +59,7 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 	//enable custom menus
 add_theme_support( 'menus' );
 
-add_theme_support('post-thumbnails');
+
 
 /**
  * Filters wp_title to print a neat <title> tag based on what is being viewed.

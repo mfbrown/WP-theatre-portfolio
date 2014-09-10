@@ -29,9 +29,9 @@
           	<div class="show-thumbnail">
 				<?php 	
 					$image = get_field('thumbnail_for_portfolio');
-		          	$size = 'medium'; 
+		          	$size = 'portfolio-image'; 
 		          		if('$image') {
-		          			echo wp_get_attachment_image( $image, $size);
+		          			echo wp_get_attachment_image( $image, 'portfolio-image');
 		          		} ?>
 	            <div>
 	            	<p><?php the_field('show_title'); ?></p>
