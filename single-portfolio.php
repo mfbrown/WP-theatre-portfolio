@@ -13,23 +13,23 @@
 				<p><?php the_field('show_date'); ?></p>
 			</div>
 			<div class="small-6 columns show-details" id="left">
-				<p>Director: <?php the_field('show_director'); ?></p>
+				<p><span class="creative-role">Director:</span> <?php the_field('show_director'); ?></p>
 				<?php if (get_field('scenic_designer')) { ?>
-					<p>Set Designer: <?php the_field('scenic_designer'); ?></p>
+					<p><span class="creative-role">Set Designer:</span> <?php the_field('scenic_designer'); ?></p>
 				<?php } ?>
 
 				<?php if (get_field('costume_designer')) { ?>
-					<p>Costume Designer: <?php the_field('costume_designer'); ?></p>
+					<p><span class="creative-role">Costume Designer:</span> <?php the_field('costume_designer'); ?></p>
 				<?php } ?>
 				
 			</div>
 			<div class="small-6 columns show-details">
 				<?php if (get_field('sound_designer')) { ?>
-					<p>Sound Designer: <?php the_field('sound_designer'); ?></p>
+					<p><span class="creative-role">Sound Designer:</span> <?php the_field('sound_designer'); ?></p>
 				<?php } ?>
 
 				<?php if (get_field('projection_designer')) { ?>
-					<p>Projection Designer: <?php the_field('projection_designer'); ?></p>
+					<p><span class="creative-role">Projection Designer:</span> <?php the_field('projection_designer'); ?></p>
 				<?php } ?>		
 			</div>
 		</div>
@@ -44,7 +44,7 @@
 		<div class="row portfolio-bottom">
 			<hr>
 			<?php if (get_field('photographer')) { ?>
-				<p>Photos by: <?php the_field('photographer'); ?></p>
+				<p><span class="creative-role">Photos by:</span> <?php the_field('photographer'); ?></p>
 			<?php } ?>
 		</div>
 

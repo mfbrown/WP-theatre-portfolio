@@ -5710,15 +5710,20 @@ th.hide-for-touch {
 
   th.show-for-print {
     display: table-cell !important; } }
-html {
-  background: url("img/Cat-Homepage-Background2.jpg") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  min-height: 100%;
-  overflow: hidden;
-  font-size: 16px; }
+#contact-form-13 input,
+#contact-form-13 textarea,
+#contact-form-13 label {
+  width: 95%;
+  margin: auto; }
+#contact-form-13 div {
+  margin-top: 16px; }
+#contact-form-13 label {
+  color: whitesmoke; }
+
+.contact-submit {
+  width: 100%;
+  margin-top: 15px;
+  text-align: center; }
 
 /*Typography------------------------------------------------ */
 body {
@@ -5743,7 +5748,7 @@ a {
 h1 {
   font-family: 'Roboto Slab', 'Arial Black', serif;
   color: #00b2e1;
-  font-size: 4em;
+  font-size: 3.5em;
   margin: 0.6em 0;
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.2); }
 
@@ -5860,7 +5865,12 @@ input[type="submit"] {
   font-style: italic; }
 
 .show-details {
-  font-size: 0.625em; }
+  font-size: 0.8em; }
+  .show-details p {
+    font-weight: 300; }
+
+.creative-role {
+  font-weight: 400; }
 
 .portfolio-bottom p {
   margin: 0.5em;
@@ -5888,15 +5898,70 @@ input[type="submit"] {
 li.title.back.js-generated h5 {
   margin-top: 0; }
 
+/* MEDIUM SCREEN AND UP----------------------------------*/
+@media only screen and (min-width: 40.063em) {
+  /*Typography Changes */
+  p {
+    font-size: 1em;
+    font-weight: 300; }
+
+  h1 {
+    text-shadow: 2px 2px 1px rgba(255, 255, 255, 0.3); }
+
+  h3 {
+    font-weight: 700; }
+
+  h4 {
+    font-weight: 700; }
+
+  footer ul {
+    font-size: 1em; }
+
+  .theatre-space {
+    font-size: 0.8em; }
+
+  .resume-header h4 {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: #444444; }
+
+  .resume-background p {
+    font-size: 1.1em; }
+
+  .show-details {
+    font-size: 1em; }
+
+  .portfolio-title h1 {
+    font-size: 3em; }
+
+  .portfolio-title h3 {
+    font-size: 2em; }
+
+  .portfolio-title p {
+    font-size: 1.2em; }
+
+  #fscf_captcha_refresh1 i {
+    font-size: 1.2em; } }
+@media only screen and (min-width: 64.063em) {
+  /*TYPOGRAPHY CHANGES --------------------- */
+  .show-details {
+    font-size: 1.1em; } }
+html {
+  background: url("img/Cat-Homepage-Background2.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  font-size: 16px; }
+
 /* GLOBAL STYLES---------------------------------------------- */
 body {
   height: inherit;
   position: relative; }
 
 .container {
-  width: 100%;
-  position: relative;
-  min-height: 100%; }
+  position: relative; }
 
 .subpage-indent {
   padding-left: 15px;
@@ -5961,7 +6026,7 @@ footer div {
 
 /* Homepage styles ----------------------------------*/
 #frontpage-info {
-  padding-top: 70px; }
+  padding-top: 20px; }
 
 .page-title,
 .page-subtitle {
@@ -6020,14 +6085,16 @@ footer div {
 
 /* PORTFOLIO STYLES -------------------------------*/
 .portfolio-grid {
-  padding-bottom: 1.875em; }
+  margin-bottom: 1.875em;
+  overflow: hidden; }
 
 .show-thumbnail {
-  position: relative; }
+  position: relative;
+  width: 100%; }
 
 .show-thumbnail img {
+  height: auto;
   width: 100%;
-  max-height: 320px;
   border: 3px solid #dddddd; }
 
 .show-thumbnail div {
@@ -6102,87 +6169,12 @@ footer div {
 .resume-download {
   text-align: center; }
 
-/* CONTACT FORM STYLES ----------------------------*/
-.fscf-input-text {
-  background-color: #e4e4e4;
-  border: none; }
-
-#fscf_required1 {
-  margin-bottom: 15px; }
-
-.fscf-input-textarea {
-  height: 200px;
-  background-color: #e4e4e4; }
-
-input.fscf-input-captcha {
-  width: 50%; }
-
-#fscf_captcha_field1 {
-  margin-top: 15px; }
-
-#fscf_captcha_refresh1 {
-  display: inline-block; }
-
-#FSContact1 {
-  margin: 0;
-  color: #e4e4e4; }
-
-#fscf_captcha_refresh1 i {
-  margin-left: 10px; }
-
-label {
-  color: #e4e4e4; }
-
-.captcha-refresh {
-  margin-left: 10px;
-  font-size: 1.25em; }
+.theatre-space {
+  display: none; }
 
 /* MEDIA QUERIES ----------------------------------*/
 /* MEDIUM SCREEN AND UP----------------------------------*/
 @media only screen and (min-width: 40.063em) {
-  /*Typography Changes */
-  p {
-    font-size: 1em;
-    font-weight: 300; }
-
-  h1 {
-    text-shadow: 2px 2px 1px rgba(255, 255, 255, 0.3); }
-
-  h3 {
-    font-weight: 700; }
-
-  h4 {
-    font-weight: 700; }
-
-  footer ul {
-    font-size: 1em; }
-
-  .theatre-space {
-    font-size: 0.8em; }
-
-  .resume-header h4 {
-    font-size: 1.25em;
-    font-weight: 700;
-    color: #444444; }
-
-  .resume-background p {
-    font-size: 1.1em; }
-
-  .show-details {
-    font-size: 1em; }
-
-  .portfolio-title h1 {
-    font-size: 3em; }
-
-  .portfolio-title h3 {
-    font-size: 2em; }
-
-  .portfolio-title p {
-    font-size: 1.2em; }
-
-  #fscf_captcha_refresh1 i {
-    font-size: 1.2em; }
-
   /*Layout Changes */
   .top-bar-section .dropdown li a {
     padding: 12px; }
@@ -6240,13 +6232,12 @@ label {
 
   /*Resize gallery items to 50%*/
   .gallery-col-3 .gallery-item {
-    width: 50% !important; } }
+    width: 50% !important; }
+
+  .theatre-space {
+    display: inline; } }
 /* LARGE SCREEN ------------------------------------*/
 @media only screen and (min-width: 64.063em) {
-  /*TYPOGRAPHY CHANGES --------------------- */
-  .show-details {
-    font-size: 1.1em; }
-
   .homepage-nav a:hover {
     background-color: #008db2;
     -webkit-transition-property: background-color;

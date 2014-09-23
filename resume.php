@@ -62,7 +62,7 @@ $the_query = new WP_Query( $args ); //WP_Query accepts an array called $args
 								<a href="index.php?p=<?php the_field('portfolio_entry'); ?>"><i class="fa fa-picture-o"></i></a>
 							<?php endif; ?>
 						</p>
-						<a href="<?php the_field('theatre_website'); ?>">
+						<?php the_field('theatre_website'); ?>
 							<p class="small-4 medium-5 columns"><?php the_field('company'); ?>
 								<?php if (get_field('theatre')): ?>
 									;<br><span class="theatre-space"><?php the_field('theatre'); ?></span>
@@ -95,10 +95,10 @@ $the_query = new WP_Query( $args ); //WP_Query accepts an array called $args
 					<div class="row subpage-indent">
 						<div class="row subpage-indent resume-rows">
 						<p class="small-4 medium-3 columns subpage-indent show-title"><?php the_field('show_name'); ?></p>
-						<a href="<?php the_field('theatre_website'); ?>">
+						<?php the_field('theatre_website'); ?>
 							<p class="small-4 medium-5 columns"><?php the_field('company'); ?>
 								<?php if (get_field('theatre')): ?>
-									;<br><span class="theatre-space"><?php the_field('theatre'); ?></span>
+									<span class="theatre-space">;<br><?php the_field('theatre'); ?></span>
 								<?php endif; ?>
 							</p>
 						</a>
