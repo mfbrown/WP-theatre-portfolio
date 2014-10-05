@@ -59,6 +59,63 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 	//enable custom menus
 add_theme_support( 'menus' );
 
+// FILTER FOR RENAMING IMAGE SIZES
+
+// The filter runs when resizing an image to make a thumbnail or intermediate size.
+add_filter( 'image_make_intermediate_size', 'wpse_123240_rename_intermediates' );
+
+function wpse_123240_rename_intermediates( $image ) 
+{
+    // Split the $image path into directory/extension/name
+    $info = pathinfo($image);
+    $dir = $info['dirname'] . '/';
+    $ext = '.' . $info['extension'];
+    $name = wp_basename( $image, "$ext" );
+
+    // Get image information 
+    // Image edtor is used for this
+    $img = wp_get_image_editor( $image );
+    // Get image size, width and height
+    $img_size = $img->get_size();
+
+    // Image prefix small/medium/large
+    // Here based on image width
+    // Customize this to fit it to your needs
+    // Setup image name prefix variable
+    switch( $img_size['width'] )
+    {
+        case '300' :
+            $size_based_img_name_prefix = 'small';
+            break;
+        case '470':
+            $size_based_img_name_prefix = 'portfolio-image';
+            break;
+        case '600' :
+            $size_based_img_name_prefix = 'medium';
+            break;
+        case '1024' :
+            $size_based_img_name_prefix = 'large';
+            break;
+    }
+
+    // Build our new image name
+    $name_prefix = substr( $name, 0, strrpos( $name, '-' ) );
+    // The next line isn't needed for what you want
+    //$size_extension = substr( $name, strrpos( $name, '-' ) + 1 );
+    // Use the new name prefix variable instead
+    // $new_name = $dir . $size_based_img_name_prefix . '-' . $name_prefix . $ext;
+    $new_name = $dir . $name_prefix . '-' . $size_based_img_name_prefix . $ext;
+
+    // Rename the intermediate size
+    $did_it = rename( $image, $new_name );
+
+    // Renaming successful, return new name
+    if( $did_it )
+        return $new_name;
+
+    return $image;
+}
+
 
 
 /**

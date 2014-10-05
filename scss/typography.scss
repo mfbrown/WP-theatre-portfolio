@@ -1,0 +1,291 @@
+/*Typography------------------------------------------------ */
+
+body {
+	font-family: 'Lato', sans-serif;
+}
+
+p {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	font-size: 1em;
+	color: #e4e4e4;
+	line-height: 1.2em;
+}
+
+a {
+	font-family: 'Roboto Slab', sans-serif;
+	font-weight: 400;
+	text-decoration: none;
+	color: inherit;
+}
+
+.about-me a:hover { 
+	color: lightgrey;
+}
+
+h1 {
+	font-family: 'Roboto Slab', 'Arial Black', serif;
+	color: #00b2e1;
+	font-size: 3.5em;
+	margin: 0.6em 0;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.2);
+}
+
+h2 {
+	font-family: 'Roboto Slab', 'Arial Black', serif;
+	font-size: 3em;
+	color: #e4e4e4;
+	margin: 0.5em 0;
+}
+
+.about-me h3 {
+	font-size: 2em;
+}
+
+h3 {
+	font-family: 'Roboto Slab', 'Arial Black', serif;
+	font-size: 2.5em;
+	font-weight: 400;
+	color: #CACACA;
+	margin: 0.5em 0;
+}
+
+h4 {
+	font-size: 2em;
+	font-weight: 400;
+	margin: 0.5em 0;
+	color: #CACACA;
+}
+
+h5,
+h6 {
+	font-size: 1.25em;
+	font-weight: 400;
+	color: #ffffff;
+	margin: 0.5em 0;
+}
+
+footer p {
+	font-size: 0.75em;
+	line-height: 1.2;
+	color: black;
+}
+
+footer ul {
+	font-size: 0.75em;
+}
+
+hr {
+	display: block;
+	clear: both;
+	margin-bottom: 1.5em;
+}
+
+input[type="submit"] {
+	font-family: 'Roboto Slab';
+	border: none;
+	text-align: center;
+	margin-right: 0.75em;
+	color: #e4e4e4;
+	font-size: 1.2em;
+	padding: 0.4em 0.5em;
+	cursor: pointer;
+	background-color: rgba(0,141,178,0.5);
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	-ms-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+
+}
+
+/* RESUME SPECIFIC FONT RULES --------- */
+
+.resume-background h3,
+.resume-background p {
+	color: #444444;
+}
+
+.resume-background p {
+	font-size: 0.8em;
+}
+
+.resume-page h4 {
+	margin-bottom: 0.25em;
+}
+
+.resume-page {
+	color: black;
+}
+
+.resume-background hr {
+	margin-bottom: 0;
+}
+
+.resume-page p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.show-title {
+	font-style: italic;
+}
+
+.resume-header h4 {
+	font-size: 0.8em;
+	font-weight: 400;
+	margin-bottom: 0;
+	color: #444444;
+}
+
+.theatre-space {
+	font-size: 0.7em;
+	font-weight: 700;
+	margin: 0;
+	padding: 0;
+}
+
+#image-header h1 {
+	margin: 0;
+	padding-top: 50px;
+}
+
+/* PORTFOLIO SPECIFIC FONT RULES ----------- */
+
+.portfolio-title h1 {
+	font-size: 2em;
+	font-style: italic;
+}
+
+.portfolio-title h3 {
+	font-size: 1em;
+}
+
+.portfolio-title p {
+	font-size: 0.75em;
+}
+
+.show-thumbnail p {
+	font-style: italic;
+}
+
+.show-details {
+	font-size: 0.8em;
+	p {
+		font-weight: 300;
+	}
+}
+
+.creative-role {
+	font-weight: 400;
+}
+
+.portfolio-bottom p {
+	margin: 0.5em;
+	font-size: 0.75em;
+}
+
+/* CONTACT FONT RULES ----------------------- */
+
+.contact-info a:hover {
+	color: lightgrey;
+}
+
+/* NAV FONT RULES --------------------------- */
+.top-bar h1 {
+	text-shadow: none;
+}
+
+.top-bar-section ul {
+	padding-left: 20px;
+}
+
+.top-bar-section ul li a {
+	font-family: 'Roboto Slab';
+	font-size: 1em;
+	padding: 0 0 0 1em;
+}
+
+.menu-item-object-portfolio a {
+	font-style: italic;
+}
+
+li.title.back.js-generated h5 {
+	margin-top: 0;
+}
+
+// MEDIA QUERIES
+
+/* MEDIUM SCREEN AND UP----------------------------------*/
+@media only screen and (min-width: 40.063em){
+
+
+		/*Typography Changes */
+
+	p {
+		font-size: 1em;
+		font-weight: 300;
+	}
+
+	h1 {
+		text-shadow: 2px 2px 1px rgba(255,255,255,0.3); 
+	}
+
+	h3 {
+		font-weight: 700;
+	}
+
+	h4 {
+		font-weight: 700;
+	}
+
+	footer ul {
+		font-size: 1em;
+	}
+
+	.theatre-space {
+		font-size: 0.8em;
+	}
+
+	.resume-header h4 {
+		font-size: 1.25em;
+		font-weight: 700;
+		color: #444444;
+	}
+
+	.resume-background p {
+		font-size: 1.1em;
+	}
+
+	.show-details {
+		font-size: 1em;
+	}
+
+	.portfolio-title h1 {
+		font-size: 3em;
+	}
+
+	.portfolio-title h3 {
+		font-size: 2em;
+	}
+
+	.portfolio-title p {
+		font-size: 1.2em;
+	}
+
+	#fscf_captcha_refresh1 i {
+		font-size: 1.2em;
+	}
+}
+
+
+// LARGE SCREENS
+
+@media only screen and (min-width: 64.063em) { 
+	/*TYPOGRAPHY CHANGES --------------------- */
+
+	.show-details {
+		font-size: 1.1em;
+	}
+}
+

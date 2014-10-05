@@ -1,0 +1,16 @@
+#contact-form-13 input,
+#contact-form-13 textarea,
+#contact-form-13 label {
+  width: 95%;
+  margin: auto; }
+#contact-form-13 div {
+  margin-top: 16px; }
+#contact-form-13 label {
+  color: whitesmoke; }
+
+.contact-submit {
+  width: 100%;
+  margin-top: 15px;
+  text-align: center; }
+
+/*# sourceMappingURL=contact.css.map */
