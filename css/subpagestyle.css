@@ -9,15 +9,13 @@
 /* Remove HTML Background photo */
 
 html {
-	background: none;
-	overflow: visible;
+	background: url('../img/chalkboard.jpg') center center;
 }
 
 /* Apply new textured background to sub pages */
 
 body {
-	background: url('../img/chalkboard.jpg') center center;
-	overflow: visible;
+	
 }
 
 /*Adjust position and padding of page title */

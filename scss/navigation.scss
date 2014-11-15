@@ -1,0 +1,131 @@
+.navigation {
+  position: relative;
+  overflow: hidden;
+}
+
+.overflow {
+  overflow: initial;
+}
+
+.navigation-header {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.navigation-title-container {
+  width: 70%;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.navigation-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 18px;
+  color: whitesmoke;
+  text-shadow: none;
+}
+
+.hide-mobile {
+  display: none;
+}
+
+.nav-button {
+  position: absolute;
+  right: 10px;
+  padding: 5px 10px;
+  margin-top: 10px;
+  top: 0;
+}
+
+.menu-bar {
+  position: relative;
+  display: block;
+}
+
+.header-nav-menu {
+  z-index: 100;
+  list-style-type: none;
+  text-align: center;
+  padding: 10px 5px;
+  margin-left: 0;
+  width: calc(100% - 2px);
+  margin: auto;
+  background: black;
+  position: absolute;
+  top: -9999px;
+  right: -9999px;
+}
+
+.header-nav-menu li,
+.nav-button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #e4e4e4;
+  padding: 0.4em 0.5em;
+  background-color: rgba(0,141,178,0.5);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.onscreen {
+  top: 55px;
+  right: 0;
+  left: 0;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 460px) {
+  .hide-mobile {
+    display: inline;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-button {
+    display: none;
+  }
+
+  .navigation-header {
+    margin-top: 10px;
+  }
+  
+  .navigation-title-container {
+    float: left;
+    width: 50%
+  }
+  
+  .header-nav-menu {
+    position: static;
+    display: inline-block;
+    float: left;
+    width: 49%;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: right;
+    background: none;
+  }
+  .header-nav-menu li {
+    display: inline-block;
+    margin-left: 10px;
+    margin-bottom: 0;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:hover {
+      background-color: #008db2;
+    }
+  }
+}

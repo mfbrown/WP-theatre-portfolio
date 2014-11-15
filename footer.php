@@ -1,5 +1,5 @@
 	    </main>
-
+	</div>
 	    <footer>
 	      <div class="row">
 	      	<div class="small-12 columns footer-center">
@@ -33,7 +33,6 @@
 	      	</div>
 	      </div>
 	    </footer>
-    </div>
     <?php wp_footer(); ?>
   </body>
 </html>

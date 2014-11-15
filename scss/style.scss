@@ -17,14 +17,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "foundation";
 @import "contact";
 @import "typography";
+@import "navigation";
 
 html { 
-  background: url("img/Cat-Homepage-Background2.jpg") no-repeat center center; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 100%;
+  
+  // height: 100%;
   // overflow: hidden;
   font-size: 16px;
 }
@@ -32,15 +29,20 @@ html {
 
 /* GLOBAL STYLES---------------------------------------------- */
 
-body {
-	height: inherit;
+html {
+	background: url("img/Cat-Homepage-Background2.jpg") no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	// height: 100%;
 	position: relative;
 }
 
 .container {
 	// width: 100%;
 	position: relative;
-	// min-height: 100%;
+	min-height: 520px;
 }
 
 .subpage-indent {
@@ -95,9 +97,9 @@ li.title.back.js-generated h5:before {
 
 footer {
 	background-color: #fcfcfc;
-	position: absolute;
-	top: 105%;
+	// position: absolute;
 	width: 100%;
+	bottom: 0;
 }
 
 footer div {
@@ -123,9 +125,7 @@ footer div {
 }
 
 .footer-center	{
-	
 	text-align: center;
-
 }
 
 /* Homepage styles ----------------------------------*/
@@ -221,8 +221,8 @@ footer div {
 	position: absolute;
 	bottom: 3px;
 	left: 3px;
+	right: 3px;
 	margin: auto;
-	width: 98.8%;
 	border: 3px rgba(0,0,0,0.5);
 }
 
@@ -302,7 +302,7 @@ footer div {
 }
 
 .fa-picture-o {
-	margin-left: 10px;
+	margin-left: 5px;
 }
 
 .resume-download {
@@ -326,7 +326,8 @@ footer div {
 	}
 
 	#frontpage-info	{
-		margin-left: 5%;
+		padding-left: 5%;
+		padding-top: 60px;
 	}
 
 	.homepage-nav {

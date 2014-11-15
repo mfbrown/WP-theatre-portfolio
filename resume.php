@@ -34,7 +34,8 @@ $args = array(		//array accepted by WP_Query function
 	'post_type' => 'resume',
 	'meta_key' => 'year',
 	'orderby' => 'meta_value_num',
-	'order' => 'DESC' //custom post type - CHANGE TO CUSTOM POST TYPE OF CURRENT PROJECT
+	'order' => 'DESC', //custom post type - CHANGE TO CUSTOM POST TYPE OF CURRENT PROJECT
+	'posts_per_page' => -1
 );
 
 

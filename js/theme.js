@@ -53,6 +53,20 @@ $(function(){
       }
     $vwBeforeResize = $vwAfterResize;
   });
+
+  // NAVBAR
+  $(".nav-button").click(function(){
+  $('.header-nav-menu').toggleClass("onscreen");
+  $('.navigation').toggleClass("overflow");
+  });
+  // function windowCheck (){
+  //   var $vw = $(window).width();
+  //   if($vw <= 480){
+  //     $('.navigation-title').text("MFBLD");
+  //    } else {
+  //     $('.navigation-title').text("Michael Brown Lighting Designer");
+  //   }
+  // }
 });
 
 

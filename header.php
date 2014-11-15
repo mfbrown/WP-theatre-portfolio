@@ -11,34 +11,22 @@
 		<?php wp_head(); ?>
 	</head>
 	<body>
-            <nav class="top-bar" data-topbar>
-                <ul class="title-area">
-                    <li class="name">
-                        <h1><a href="<?php echo home_url(); ?>">
-                        	<?php 
-                        		$header_title .= get_bloginfo( 'name', 'display');
-                        		$header_title .= " ";
-                        		$header_title .= get_bloginfo( 'description', 'display');
-                        		echo $header_title;
-                        	?></a></h1>
-                    </li>          
-                    <li class="toggle-topbar"><a href="#"></a></li>
-                </ul>
-                <section class="top-bar-section">
-                    <?php foundation_top_bar_l(); ?>
- 
-                    <?php foundation_top_bar_r(); ?>
-                </section>
-            </nav>
+        <nav role="navigation" class="navigation clearfix">
+          <div class="navigation-header clearfix">
+            <div class="navigation-title-container">
+            <h1 class="navigation-title"><a href="/"><?php bloginfo($name); ?>&nbsp;<span class="hide-mobile"><?php bloginfo('description'); ?></span></a></h1>
+        <!--    <h1 class="navigation-title title-small">M.F.B.L.D.</h1>-->
+            <button class='nav-button'>Menu</button>
+          </div>
+          <?php // WP NAV Block
+                $args = array(
+                    'theme_location' => 'top-bar-r',
+                    'menu' => 'Main-Menu',
+                    'container' => 'false',
+                    'menu_class' => 'header-nav-menu',
+                    'menu_id' => 'header-nav'
+                    );
+                wp_nav_menu( $args ); ?>
+        </nav>
 	<div class="container">
     	<main>
-
-<?php 
-
-	// $args = array(
-	// 	'menu' => 'nav-dropdown-menu'
-	// 	);
-
-
-	// wp_nav_menu( $args );
-?>

@@ -5810,6 +5810,9 @@ input[type="submit"] {
   -ms-transition-duration: 0.5s;
   transition-duration: 0.5s; }
 
+.nav-button {
+  font-family: 'Roboto Slab', 'Arial Black'; }
+
 /* RESUME SPECIFIC FONT RULES --------- */
 .resume-background h3,
 .resume-background p {
@@ -5946,22 +5949,130 @@ li.title.back.js-generated h5 {
   /*TYPOGRAPHY CHANGES --------------------- */
   .show-details {
     font-size: 1.1em; } }
+.navigation {
+  position: relative;
+  overflow: hidden; }
+
+.overflow {
+  overflow: initial; }
+
+.navigation-header {
+  position: relative;
+  margin-bottom: 15px; }
+
+.navigation-title-container {
+  width: 70%;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.navigation-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 18px;
+  color: whitesmoke;
+  text-shadow: none; }
+
+.hide-mobile {
+  display: none; }
+
+.nav-button {
+  position: absolute;
+  right: 10px;
+  padding: 5px 10px;
+  margin-top: 10px;
+  top: 0; }
+
+.menu-bar {
+  position: relative;
+  display: block; }
+
+.header-nav-menu {
+  z-index: 100;
+  list-style-type: none;
+  text-align: center;
+  padding: 10px 5px;
+  margin-left: 0;
+  width: calc(100% - 2px);
+  margin: auto;
+  background: black;
+  position: absolute;
+  top: -9999px;
+  right: -9999px; }
+
+.header-nav-menu li,
+.nav-button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #e4e4e4;
+  padding: 0.4em 0.5em;
+  background-color: rgba(0, 141, 178, 0.5); }
+  .header-nav-menu li:last-child,
+  .nav-button:last-child {
+    margin-bottom: 0; }
+
+.onscreen {
+  top: 55px;
+  right: 0;
+  left: 0; }
+
+/* MEDIA QUERIES */
+@media (min-width: 460px) {
+  .hide-mobile {
+    display: inline; } }
+@media (min-width: 768px) {
+  .nav-button {
+    display: none; }
+
+  .navigation-header {
+    margin-top: 10px; }
+
+  .navigation-title-container {
+    float: left;
+    width: 50%; }
+
+  .header-nav-menu {
+    position: static;
+    display: inline-block;
+    float: left;
+    width: 49%;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: right;
+    background: none; }
+
+  .header-nav-menu li {
+    display: inline-block;
+    margin-left: 10px;
+    margin-bottom: 0;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    transition-duration: 0.5s; }
+    .header-nav-menu li:first-child {
+      margin-left: 0; }
+    .header-nav-menu li:hover {
+      background-color: #008db2; } }
+html {
+  font-size: 16px; }
+
+/* GLOBAL STYLES---------------------------------------------- */
 html {
   background: url("img/Cat-Homepage-Background2.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 100%;
-  font-size: 16px; }
-
-/* GLOBAL STYLES---------------------------------------------- */
-body {
-  height: inherit;
   position: relative; }
 
 .container {
-  position: relative; }
+  position: relative;
+  min-height: 520px; }
 
 .subpage-indent {
   padding-left: 15px;
@@ -6001,9 +6112,8 @@ li.title.back.js-generated h5:before {
 /* FOOTER STYLES ------------------------------------*/
 footer {
   background-color: #fcfcfc;
-  position: absolute;
-  top: 105%;
-  width: 100%; }
+  width: 100%;
+  bottom: 0; }
 
 footer div {
   text-align: center; }
@@ -6101,8 +6211,8 @@ footer div {
   position: absolute;
   bottom: 3px;
   left: 3px;
+  right: 3px;
   margin: auto;
-  width: 98.8%;
   border: 3px rgba(0, 0, 0, 0.5); }
 
 .show-thumbnail div p {
@@ -6164,7 +6274,7 @@ footer div {
   font-weight: 400; }
 
 .fa-picture-o {
-  margin-left: 10px; }
+  margin-left: 5px; }
 
 .resume-download {
   text-align: center; }
@@ -6180,7 +6290,8 @@ footer div {
     padding: 12px; }
 
   #frontpage-info {
-    margin-left: 5%; }
+    padding-left: 5%;
+    padding-top: 60px; }
 
   .homepage-nav {
     text-align: left;
